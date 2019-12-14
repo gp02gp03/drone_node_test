@@ -1,0 +1,13 @@
+pipeline:
+  frontend:
+    image: node:8.3.0
+    group: build
+    commands:
+      - npm install
+      - node test.js
+  backend:
+    image: node:8.3.0
+    group: build
+    commands:
+      - echo "backend testing"
+      - ls -l
